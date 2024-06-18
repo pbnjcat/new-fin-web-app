@@ -1,10 +1,38 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import HomePage from './Pages/Home.page';
+import RootLayout from './layout/RootLayout';
+import NotFoundPage from './Pages/NotFound.page';
 
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <HomePage />,
+    element: <RootLayout />,
+    children: [
+      {
+        index: true,
+        element: <HomePage />,
+        errorElement: <NotFoundPage />,
+      },
+      // {
+      //   path: "search/:searchWord",
+      //   element: <Definition />,
+      //   errorElement: <Error />,
+      // },
+      // {
+      //   path: "bookmarks",
+      //   element: <Bookmarks />,
+      //   errorElement: <Error />,
+      // },
+      // {
+      //   path: "history",
+      //   element: <History />,
+      //   errorElement: <Error />,
+      // },
+    ],
+  },
+  {
+    path: '*',
+    element: <NotFoundPage />,
   },
 ]);
 
