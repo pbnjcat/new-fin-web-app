@@ -28,11 +28,11 @@ const router = createBrowserRouter([
       //   element: <History />,
       //   errorElement: <Error />,
       // },
+      {
+        path: '*',
+        element: <NotFoundPage />,
+      },
     ],
-  },
-  {
-    path: '*',
-    element: <NotFoundPage />,
   },
 ]);
 
