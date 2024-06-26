@@ -1,8 +1,8 @@
 import { Card, Image, Text, Badge, Button, Group, Container, SimpleGrid, Title, Grid } from '@mantine/core';
 
-import image1 from '../../assets/wall1.png'
-import image2 from '../../assets/wall2.jpg'
-import image3 from '../../assets/wall3.png'
+import image1 from '../../assets/wall1.jpg';
+import image2 from '../../assets/wall2.jpeg';
+import image3 from '../../assets/wall3.jpg';
 
 import classes from './Card.module.scss';
 
@@ -59,7 +59,7 @@ export default function CardsComponent() {
     ))
     return (
         <section className={classes.wrapper}>
-            <SimpleGrid cols={3} spacing={60} >
+            <SimpleGrid cols={3} spacing={60} className={classes.grid} >
                 {cards}
             </SimpleGrid>
         </section>

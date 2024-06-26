@@ -15,7 +15,7 @@ export default function Hero() {
           and more — plus an average savings of 5%
         </Text>
         <Group className={classes.controls} mt={20}>
-          <Link to="/prototype">
+          <Link to="/chat">
             <Button
               size="xl"
               className={classes.control}

@@ -1,7 +1,9 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import HomePage from './Pages/Home.page';
 import RootLayout from './layout/RootLayout';
+import ChatLayout from './layout/ChatLayout';
 import NotFoundPage from './Pages/NotFound.page';
+import GeneratePage from './Pages/Generate.page';
 
 const router = createBrowserRouter([
   {
@@ -14,11 +16,6 @@ const router = createBrowserRouter([
         errorElement: <NotFoundPage />,
       },
       // {
-      //   path: "search/:searchWord",
-      //   element: <Definition />,
-      //   errorElement: <Error />,
-      // },
-      // {
       //   path: "bookmarks",
       //   element: <Bookmarks />,
       //   errorElement: <Error />,
@@ -28,6 +25,22 @@ const router = createBrowserRouter([
       //   element: <History />,
       //   errorElement: <Error />,
       // },
+      {
+        path: '*',
+        element: <NotFoundPage />,
+      },
+    ],
+  },
+  {
+    // ../chat/prototype
+    path: 'chat',
+    element: <ChatLayout />,
+    children: [
+      {
+        path: 'prototype',
+        element: <GeneratePage />,
+        errorElement: <NotFoundPage />,
+      },
       {
         path: '*',
         element: <NotFoundPage />,
