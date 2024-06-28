@@ -22,7 +22,7 @@ export default function ChatLayout() {
                     hiddenFrom="sm"
                     size="sm"
                 />
-                <div>Logo</div>
+                <div>Terminus</div>
             </AppShell.Header>
 
             <AppShell.Navbar p="md">Navbar</AppShell.Navbar>

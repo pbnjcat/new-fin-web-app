@@ -37,7 +37,7 @@ const router = createBrowserRouter([
     element: <ChatLayout />,
     children: [
       {
-        path: 'prototype',
+        index: true,
         element: <GeneratePage />,
         errorElement: <NotFoundPage />,
       },

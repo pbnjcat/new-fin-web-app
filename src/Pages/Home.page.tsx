@@ -7,11 +7,9 @@ export default function HomePage() {
     <>
       <Hero />
       <Container component="section" p={'lg'} pt={100}>
+        <Title order={1}>The card is just the start</Title>
         <Text c="black" style={{ textAlign: "center" }}>
-          <Title order={1}>The card is just the start</Title>
-          <p>
-            Everything you need to control spend and optimize finance operations, all on a single platform.
-          </p>
+          Everything you need to control spend and optimize finance operations, all on a single platform.
         </Text>
       </Container>
     </>

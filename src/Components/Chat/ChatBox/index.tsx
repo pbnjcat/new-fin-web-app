@@ -13,10 +13,9 @@ export default function ChatBox() {
     }
 
     return (
-        <>
-            <Stack justify="center" p={0}>
-                
-                <Group p="xs" className={classes.user_input}>
+        <div className={classes.wrapper}>
+            <Stack justify="center" p={0} w={1000}>
+                <Group p="xs" className={classes.user_input} >
                     <TextInput
                         value={value}
                         onChange={(event) => setValue(event.currentTarget.value)}
@@ -29,7 +28,7 @@ export default function ChatBox() {
                         }
                     />
                     <ActionIcon
-                        onClick={() => sendMessage}
+                        onClick={() => sendMessage()}
                         variant="hover"
                         size="lg"
                         disabled={
@@ -40,6 +39,7 @@ export default function ChatBox() {
                     </ActionIcon>
                 </Group>
             </Stack>
-        </>
+        </div>
+
     )
 }
